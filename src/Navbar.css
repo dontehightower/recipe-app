@@ -1,0 +1,39 @@
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #0b2f68;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+h2 {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar a {
+  opacity: .75;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  opacity: 1;
+  transition: .3s background-color;
+}
+
+.navbar ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0 16px 0 16px;
+}
+
+.navbar ul li {
+  display: inline;
+  padding: 5px;
+}
