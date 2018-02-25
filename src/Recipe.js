@@ -2,10 +2,14 @@ import React, {Component} from 'react';
 import './Recipe.css';
 import PropTypes from 'prop-types';
 
+// Recipe Cards Component
 class Recipe extends Component {
   render(){
+    // deconstruct the properties from props
     const {title, img, instructions} = this.props;
+    // make a copy of the ingredients array
     const ingredients = this.props.ingredients.map((ing, index) => (
+      // show an li for each ingredient
       <li key={index}>{ing}</li>
     ))
     return (
