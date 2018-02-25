@@ -4,9 +4,18 @@ import PropTypes from 'prop-types';
 
 // Recipe Cards Component
 class Recipe extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
+    instructions: Proptypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequire,
+    onDelete: PropTypes.func.isRequired
+  }
+
   render(){
     // deconstruct the properties from props
-    const {title, img, instructions} = this.props;
+    const {title, img, instructions, id, onDelete} = this.props;
     // make a copy of the ingredients array
     const ingredients = this.props.ingredients.map((ing, index) => (
       // show an li for each ingredient
@@ -24,6 +33,7 @@ class Recipe extends Component {
           </ul>
           <h4>Instructions</h4>
           <p>{instructions}</p>
+          <button type='button' onClick={() => onDelete(id)}>DELETE</button>
         </div>       
       </div>
     );
