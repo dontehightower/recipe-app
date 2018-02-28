@@ -69,7 +69,7 @@ class RecipeApp extends Component {
           onSave={this.handleSave}
           onClose={() => this.setState({ showForm: false })}/> 
         : null}
-        <RecipeList onDelete-={this.onDelete} recipes={this.state.recipes} />
+        <RecipeList onDelete={this.onDelete} recipes={this.state.recipes} />
       </div>
     );
   }
