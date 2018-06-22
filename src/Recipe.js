@@ -7,7 +7,7 @@ class Recipe extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-    instructions: Proptypes.string.isRequired,
+    instructions: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
     id: PropTypes.number.isRequire,
     onDelete: PropTypes.func.isRequired
@@ -34,7 +34,7 @@ class Recipe extends Component {
           <h4>Instructions</h4>
           <p>{instructions}</p>
           <button type='button' onClick={() => onDelete(id)}>DELETE</button>
-        </div>       
+        </div>
       </div>
     );
   }
